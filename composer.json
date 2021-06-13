@@ -1,0 +1,31 @@
+{
+    "name": "axy/nginx-config-builder",
+    "type": "library",
+    "description": "Builds nginx config file",
+    "keywords": [],
+    "homepage": "https://github.com/axypro/nginx-config-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Grigoriev",
+            "email": "go.vasac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "axy/nginx-config-syntax": "^0.1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "axy\\nginx\\config\\builder\\": "src",
+            "axy\\nginx\\config\\builder\\tests\\": "tests"
+        }
+    },
+    "archive": {
+        "exclude": ["/tests/*", "/doc/*", "/cs.sh", "/phpmd.sh", "/*.xml.dist", "/CHANGELOG.md"]
+    }
+}

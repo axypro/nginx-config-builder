@@ -1,0 +1,33 @@
+user www www;
+access_log /var/log/nginx/access.log;
+error_log /var/log/nginx/error.log;
+http {
+    log_format main '$status';
+    log_format custom escape=json '$remote_addr - $status';
+    server {
+        index index.html index.php;
+        root /var/www/html;
+        auth_basic "Password, please";
+        auth_basic_user_file /var/www/.htpasswd;
+        server_name example.com;
+        listen 127.0.0.1:443 default_server ssl ipv6only=off deferred;
+        access_log /var/log/nginx/example.access.log;
+        error_log /var/log/nginx/example.error.log;
+        location ~ /.ht {
+            deny all;
+        }
+        location @name {
+            root /var/www/app;
+            auth_basic off;
+            internal;
+        }
+    }
+    server {
+        server_name www.example.com;
+        listen 80;
+        location / {
+            return 301 https://example.com$request_uri;
+        }
+    }
+    include /etc/nginx/conf.d/*.conf;
+}
