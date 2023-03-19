@@ -1,10 +1,12 @@
 # axy\nginx\config\builder
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/axy/nginx-config-builder.svg?style=flat-square)](https://packagist.org/packages/axy/nginx-config-builder)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
-[![License](https://poser.pugx.org/axy/nginx-config-builder/license)](LICENSE)
-
 Builds nginx config file.
+
+[![Latest Stable Version](https://img.shields.io/packagist/v/axy/nginx-config-builder.svg?style=flat-square)](https://packagist.org/packages/axy/nginx-config-builder)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg?style=flat-square)](https://php.net/)
+[![Tests](https://github.com/axypro/nginx-config-builder/actions/workflows/test.yml/badge.svg)](https://github.com/axypro/nginx-config-builder/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/axypro/nginx-config-builder/badge.svg?branch=master)](https://coveralls.io/github/axypro/nginx-config-builder?branch=master)
+[![License](https://poser.pugx.org/axy/nginx-config-builder/license)](LICENSE)
 
 This library is based on [axy\nginx\config\syntax](https://github.com/axypro/nginx-config-syntax)
 
